@@ -12,21 +12,55 @@ body {
   background: #f5f4f4;
 }
 
+h1,
+h2,
+h3,
+p,
+button {
+  color: #f5f4f4;
+}
+
 .content {
-  width: 90vw;
-  height: 500px;
-  border: 1px solid black;
+  max-width: 60vw;
+  min-width: 60vw;
+  height: 600px;
+  background: #1f1b26;
   border-radius: 10px;
   font-family: "Lato", sans-serif;
 }
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .inner-div {
   width: 80%;
   height: 80%;
+  position: relative;
+}
+.return-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.return-button {
+  background: none;
+  color: #95a5bc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  transition: 0.5s;
+  margin-top: 1px;
+  margin-right: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.return-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* landing page */
@@ -36,16 +70,51 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.title-div {
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+.title-div:hover {
+  transform: scale(1.1);
+}
 .logo {
-  font-size: 3em;
-  margin: 20px;
+  font-size: 4em;
+  transform: rotate(-5deg);
+}
+.search-div {
+  width: 300px;
+  position: relative;
 }
 .search-bar {
-  margin: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px;
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
 }
 .submit-button {
-  font-size: 1em;
-  border: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border: 0;
+  background: #635d64;
+  color: #fff;
+  outline: none;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 100px;
+  z-index: 2;
+  transition: 0.5s;
+}
+.submit-button:hover {
+  cursor: pointer;
+  background: #b2bbc5;
+}
+.hidden-text {
+  margin-top: 20px;
 }
 
 /* next page / weather page*/
@@ -60,6 +129,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding: 5px;
 }
 .current-temp-div {
   padding: 10px;
@@ -68,13 +138,62 @@ body {
 }
 .desc-div {
   margin: 10px;
+  font-size: 2em;
 }
 .bottom-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  padding: 5px;
+  font-size: 1.5em;
 }
 .extra {
   margin: 15px;
+  color: #95a5bc;
+}
+.inner-bottom-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.measure-button {
+  color: #635d64;
+  font-size: 1.5em;
+  border: none;
+  background: none;
+  transition: 0.5s;
+}
+.measure-button:hover {
+  color: #f5f4f4;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.measure-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background: #1f1b26;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-text {
+  font-size: 1.2rem;
+  font-family: "Vollkorn", serif;
+}
+.link {
+  text-decoration: none;
+  color: #95a5bc;
 }
